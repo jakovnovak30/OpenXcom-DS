@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/jakov/Documents/OpenXcom-DS/cmake_install.cmake",
+		"/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp/cmake_install.cmake",
+		"/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp/util/cmake_install.cmake",
+		"/home/jakov/Documents/OpenXcom-DS/docs/cmake_install.cmake",
+		"/home/jakov/Documents/OpenXcom-DS/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,7 +1,20 @@
 cmake_minimum_required ( VERSION 3.5 )
 
-project ( OpenXcom )
+# specify cross compilers and tools
+set(CMAKE_C_COMPILER /sbin/arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER /sbin/arm-none-eabi-g++)
+set(CMAKE_ASM_COMPILER /sbin/arm-none-eabi-gcc)
+set(CMAKE_AR /sbin/arm-none-eabi-ar)
+set(CMAKE_OBJCOPY /sbin/arm-none-eabi-objcopy)
+set(CMAKE_OBJDUMP /sbin/arm-none-eabi-objdump)
+set(SIZE /sbin/arm-none-eabi-size)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
+set(DS_FLAGS "-O3 -mcpu=arm9tdmi")
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${DS_FLAGS}")
+set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} ${DS_FLAGS}")
+
+project ( OpenXcom )
 set ( CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/modules" )
 include(BuildType)
 include(GNUInstallDirs)
@@ -9,7 +22,8 @@ include(GNUInstallDirs)
 # For yaml-cpp
 set (CMAKE_CXX_STANDARD 11)
 # use std=c++11 rather than std=gnu++11
-set (CMAKE_CXX_EXTENSIONS OFF)
+set (CMAKE_CXX_EXTENSIONS ON)
+set (CMAKE_C_EXTENSIONS ON)
 
 option ( DEV_BUILD "Development Build. Disable this for release builds" ON )
 option ( BUILD_PACKAGE "Prepares build for creation of a package with CPack" ON )
@@ -31,97 +45,6 @@ if ( CHECK_CCACHE )
     set_property( GLOBAL PROPERTY RULE_LAUNCH_LINK "${CCACHE_PROGRAM}" )
     message ( "found CCACHE (${CCACHE_PROGRAM})" )
   endif()
-endif ()
-
-if ( WIN32 )
-  set ( default_deps_dir "${CMAKE_SOURCE_DIR}/deps" )
-endif ()
-
-if ( APPLE )
-  set ( MACOS_SDLMAIN_M_PATH "${CMAKE_SOURCE_DIR}/src/apple/SDLMain.m" CACHE STRING "Path to SDLMain.m file" )
-  option ( CREATE_BUNDLE "Create a Mac OS application bundle" ON )
-  if ( NOT EXISTS "${MACOS_SDLMAIN_M_PATH}" )
-    message ( FATAL_ERROR "On Mac OS, SDLMain.m is required. Please set the MACOS_SDLMAIN_M_PATH variable" )
-  endif ()
-endif ()
-
-set ( DEPS_DIR "${default_deps_dir}" CACHE STRING "Dependencies directory" )
-
-# Add check for library (SDL_gfx, yaml-cpp )
-if ( IS_DIRECTORY ${DEPS_DIR}/include )
-   include_directories ( SYSTEM ${DEPS_DIR}/include/SDL ${DEPS_DIR}/include/yaml-cpp ${DEPS_DIR}/include )
-   if ( CMAKE_CL_64 )
-     link_directories ( ${DEPS_DIR}/lib/x64 )
-   else ( )
-     link_directories ( ${DEPS_DIR}/lib/Win32 )
-   endif()
-   set( SDL_LIBRARY SDL )
-   set ( SDLGFX_LIBRARY SDL_gfx )
-   set ( SDLMIXER_LIBRARY SDL_mixer )
-   set ( SDLIMAGE_LIBRARY SDL_image )
-   set ( YAMLCPP_LIBRARY yaml-cpp )
-   set ( YAMLCPP_LIBRARY_DEBUG yaml-cppd )
-   add_definitions( -DYAML_CPP_DLL )
-else ( )
-  find_package ( SDL2 COMPONENTS mixer gfx image)
-  find_package ( Yaml_cpp 0.5.3)
-  set ( YAMLCPP_LIBRARY_DEBUG ${YAMLCPP_LIBRARY} )
-
-  if ( NOT SDL_FOUND )
-    message ( FATAL_ERROR "Can't find SDL which is required" )
-  else ()
-    include_directories ( SYSTEM ${SDL_INCLUDE_DIR} )
-    message ( "found SDL ${SDL_MAJOR}.${SDL_MINOR}.${SDL_MICRO} (${SDL_LIBRARY_DIRS}:${SDL_INCLUDE_DIR})" )
-  endif ()
-
-  if ( NOT SDLMIXER_FOUND )
-    message ( FATAL_ERROR "Can't find SDL_mixer which is required" )
-  else ()
-    include_directories ( SYSTEM ${SDLMIXER_INCLUDE_DIR} )
-    message ( "found SDL_mixer ${SDL_MIXER_MAJOR}.${SDL_MIXER_MINOR}.${SDL_MIXER_MICRO} (${SDL_MIXER_LIBRARY_DIRS}:${SDLMIXER_INCLUDE_DIR})" )
-  endif ()
-
-  if ( NOT SDLGFX_FOUND )
-    message ( FATAL_ERROR "Can't find SDL_gfx which is required" )
-  else ()
-    include_directories ( SYSTEM ${SDLGFX_INCLUDE_DIR} )
-    message ( "found SDL_gfx ${SDL_GFX_MAJOR}.${SDL_GFX_MINOR}.${SDL_GFX_MICRO} (${SDL_GFX_LIBRARY_DIRS}:${SDLGFX_INCLUDE_DIR})" )
-  endif ()
-
-  if ( NOT SDLIMAGE_FOUND )
-    message ( FATAL_ERROR "Can't find SDL_image which is required" )
-  else ()
-    include_directories ( SYSTEM ${SDLIMAGE_INCLUDE_DIR} )
-    message ( "found SDL_image ${SDL_IMAGE_MAJOR}.${SDL_IMAGE_MINOR}.${SDL_IMAGE_MICRO} (${SDL_IMAGE_LIBRARY_DIRS}:${SDLIMAGE_INCLUDE_DIR})" )
-  endif ()
-
-  if ( NOT YAMLCPP_FOUND )
-    message ( FATAL_ERROR "Can't find yaml-cpp which is required" )
-  else ()
-    include_directories ( SYSTEM ${YAMLCPP_INCLUDE_DIR} )
-    message ( "found yaml-cpp(${YAMLCPP_LIBRARY_DIRS}:${YAMLCPP_INCLUDE_DIR})" )
-  endif ( NOT YAMLCPP_FOUND )
-endif()
-
-# Find OpenGL
-set (OpenGL_GL_PREFERENCE LEGACY)
-find_package ( OpenGL )
-if ( NOT OPENGL_FOUND )
-  message ( WARNING "Can't find OpenGL; how does that even happen?\n"
-    "Continuing building without OpenGL support."
-    )
-  add_definitions(-D__NO_OPENGL)
-else ()
-    include_directories ( SYSTEM ${OPENGL_INCLUDE_DIR} )
-    message ( "found openGL (${OPENGL_LIBRARIES})" )
-endif ()
-
-# Resolve backtraces
-if ( WIN32 )
-	link_libraries( dbghelp )
-endif ()
-if ( UNIX )
-	link_libraries( ${CMAKE_DL_LIBS} )
 endif ()
 
 # Read version number
@@ -212,6 +135,19 @@ if ( NOT WIN32 )
   install(FILES "${CMAKE_SOURCE_DIR}/res/linux/icons/openxcom.svg"
     DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/scalable/apps")
 endif ()
+
+
+add_subdirectory(libs/yaml-cpp)
+
+add_library(SDL STATIC IMPORTED)
+
+set_target_properties(SDL PROPERTIES
+    IMPORTED_LOCATION
+        ${CMAKE_SOURCE_DIR}/libs/SDL-nds/lib/libSDL.a
+
+    INTERFACE_INCLUDE_DIRECTORIES
+        ${CMAKE_SOURCE_DIR}/libs/SDL-nds/include
+)
 
 add_subdirectory ( docs )
 add_subdirectory ( src )
