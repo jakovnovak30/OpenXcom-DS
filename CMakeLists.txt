@@ -1,4 +1,4 @@
-cmake_minimum_required ( VERSION 3.1 )
+cmake_minimum_required ( VERSION 3.5 )
 
 project ( OpenXcom )
 
@@ -212,6 +212,20 @@ if ( NOT WIN32 )
   install(FILES "${CMAKE_SOURCE_DIR}/res/linux/icons/openxcom.svg"
     DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/icons/hicolor/scalable/apps")
 endif ()
+
+if(DS)
+    set(DS_FLAGS "-O3 -mcpu=arm9tdmi")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${DS_FLAGS}")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${DS_FLAGS}")
+
+    set(CMAKE_C_COMPILER   /sbin/arm-none-eabi-gcc)
+    set(CMAKE_CXX_COMPILER /sbin/arm-none-eabi-g++)
+    set(CMAKE_ASM_COMPILER /sbin/arm-none-eabi-gcc)
+    set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+    add_subdirectory(libs/yaml-cpp)
+	  link_libraries( ${CMAKE_DL_LIBS} )
+endif()
 
 add_subdirectory ( docs )
 add_subdirectory ( src )

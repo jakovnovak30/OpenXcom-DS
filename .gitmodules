@@ -1,0 +1,9 @@
+[submodule "libs/yaml-cpp"]
+	path = libs/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "libs/SDL"]
+	path = libs/SDL
+	url = https://github.com/libsdl-org/SDL.git
+[submodule "libs/SDL-1.2"]
+	path = libs/SDL-1.2
+	url = https://github.com/libsdl-org/SDL-1.2.git
