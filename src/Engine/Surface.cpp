@@ -779,7 +779,10 @@ void Surface::drawPolygon(Sint16 *x, Sint16 *y, int n, Uint8 color)
  */
 void Surface::drawTexturedPolygon(Sint16 *x, Sint16 *y, int n, Surface *texture, int dx, int dy)
 {
+	#ifndef __NDS__
 	texturedPolygon(_surface, x, y, n, texture->getSurface(), dx, dy);
+	#endif
+	//TODO: kak ovo na NDS??
 }
 
 /**

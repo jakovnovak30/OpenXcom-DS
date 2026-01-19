@@ -28,7 +28,6 @@
 #include <time.h>
 #include <signal.h>
 #include <sys/stat.h>
-#include "../dirent.h"
 #include "Logger.h"
 #include "Exception.h"
 #include "Options.h"
@@ -69,9 +68,7 @@
 #include <sys/param.h>
 #include <sys/types.h>
 #include <pwd.h>
-#include <execinfo.h>
 #include <cxxabi.h>
-#include <dlfcn.h>
 #include "Unicode.h"
 #endif
 #include <SDL.h>
@@ -482,6 +479,11 @@ std::string endPath(const std::string &path)
  * @param ext Extension of files ("" if it doesn't matter).
  * @return Ordered list of all the files.
  */
+#ifdef __NDS__
+std::vector<std::string> getFolderContents(const std::string &path, const std::string &ext) {
+	return std::vector<std::string>();
+}
+#else
 std::vector<std::string> getFolderContents(const std::string &path, const std::string &ext)
 {
 	std::vector<std::string> files;
@@ -518,6 +520,7 @@ std::vector<std::string> getFolderContents(const std::string &path, const std::s
 	std::sort(files.begin(), files.end());
 	return files;
 }
+#endif
 
 /**
  * Gets the contents of a folder and checks
@@ -526,6 +529,11 @@ std::vector<std::string> getFolderContents(const std::string &path, const std::s
  * @param size Size of the folder (number of contents).
  * @return False if the folder doesn't exist or doesn't meet the size.
  */
+#ifdef __NDS__
+bool folderMinSize(const std::string &path, int size) {
+	return false; // TODO: actual implementation
+}
+#else
 bool folderMinSize(const std::string &path, int size)
 {
 	if (!folderExists(path))
@@ -569,6 +577,7 @@ bool folderMinSize(const std::string &path, int size)
 	closedir(dp);
 	return (num >= size);
 }
+#endif
 
 /**
  * Checks if a certain path exists and is a folder.
@@ -996,6 +1005,11 @@ void setWindowIcon(int, const std::string &unixPath)
  * Logs the stack back trace leading up to this function call.
  * @param ctx Pointer to stack context (PCONTEXT on Windows), NULL to use current context.
  */
+#ifdef __NDS__
+void stackTrace(void *ctx) {
+	// TODO: implement this
+}
+#else
 void stackTrace(void *ctx)
 {
 #ifdef _WIN32
@@ -1162,6 +1176,7 @@ void stackTrace(void *ctx)
 #endif
 	ctx = (void*)ctx;
 }
+#endif
 
 /**
  * Generates a timestamp of the current time.

@@ -43,6 +43,10 @@ static char rcsid =
 #include "SDL_video.h"
 #include "SDL_byteorder.h"
 #include "SDL_version.h"
+#include "SDL_thread.h"
+#include "SDL_endian.h"
+#include "SDL_mixer.h"
+#include "SDL_gfxPrimitives.h"
 
 #include "begin_code.h"
 /* Set up for C function definitions, even when using C++ */
@@ -64,7 +68,7 @@ extern "C" {
 #define SDL_INIT_EVENTTHREAD	0x01000000	/* Not supported on all OS's */
 #define SDL_INIT_EVERYTHING	0x0000FFFF
 
-/* This function loads the SDL dynamically linked library and initializes 
+/* This function loads the SDL dynamically linked library and initializes
  * the subsystems specified by 'flags' (and those satisfying dependencies)
  * Unless the SDL_INIT_NOPARACHUTE flag is set, it will install cleanup
  * signal handlers for some commonly ignored fatal signals (like SIGSEGV)

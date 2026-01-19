@@ -1,0 +1,31 @@
+src/CMakeFiles/openxcom.dir/Engine/Scalers/hq4x.cpp.obj: \
+ /home/jakov/Documents/OpenXcom-DS/src/Engine/Scalers/hq4x.cpp \
+ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/stdint.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/machine/_default_types.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/features.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/_newlib_version.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/_intsup.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/_stdint.h \
+ /home/jakov/Documents/OpenXcom-DS/src/Engine/Scalers/common.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/stdlib.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/cstdlib \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/arm-none-eabi/bits/c++config.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/arm-none-eabi/bits/os_defines.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/arm-none-eabi/bits/cpu_defines.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/machine/ieeefp.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/_ansi.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/newlib.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/config.h \
+ /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include/stddef.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/reent.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/_ansi.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/cdefs.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/_types.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/machine/_types.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/sys/lock.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/machine/stdlib.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/alloca.h \
+ /opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/bits/std_abs.h \
+ /home/jakov/Documents/OpenXcom-DS/src/Engine/Scalers/hqx.h

@@ -20,6 +20,7 @@
 #include <sstream>
 #include <iomanip>
 #include <SDL_gfxPrimitives.h>
+#include <SDL_mouse.h>
 #include "Map.h"
 #include "Camera.h"
 #include "BattlescapeState.h"

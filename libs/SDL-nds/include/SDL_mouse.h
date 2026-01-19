@@ -89,7 +89,7 @@ extern DECLSPEC SDL_Cursor * SDLCALL SDL_CreateCursor
 
 /*
  * Set the currently active cursor to the specified one.
- * If the cursor is currently visible, the change will be immediately 
+ * If the cursor is currently visible, the change will be immediately
  * represented on the display.
  */
 extern DECLSPEC void SDLCALL SDL_SetCursor(SDL_Cursor *cursor);
@@ -126,6 +126,8 @@ extern DECLSPEC int SDLCALL SDL_ShowCursor(int toggle);
 #define SDL_BUTTON_RIGHT	3
 #define SDL_BUTTON_WHEELUP	4
 #define SDL_BUTTON_WHEELDOWN	5
+#define SDL_BUTTON_X1	6
+#define SDL_BUTTON_X2 7
 #define SDL_BUTTON_LMASK	SDL_BUTTON(SDL_BUTTON_LEFT)
 #define SDL_BUTTON_MMASK	SDL_BUTTON(SDL_BUTTON_MIDDLE)
 #define SDL_BUTTON_RMASK	SDL_BUTTON(SDL_BUTTON_RIGHT)

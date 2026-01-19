@@ -1,0 +1,18 @@
+# update
+#
+# libSDL_gfx Makefile
+# IMRTEC
+# 
+
+
+KOS_LOCAL_CFLAGS = -I$(KOS_BASE)/../kos-ports/include/SDL
+
+OBJS = SDL_gfxPrimitives.o SDL_rotozoom.o SDL_framerate.o	SDL_imageFilter.o
+
+myall: $(OBJS)
+	rm -f $(KOS_BASE)/addons/lib/dreamcast/libSDL_gfx.a
+	$(KOS_AR) rcs $(KOS_BASE)/addons/lib/dreamcast/libSDL_gfx.a $(OBJS)
+
+include $(KOS_BASE)/Makefile.prefab
+
+

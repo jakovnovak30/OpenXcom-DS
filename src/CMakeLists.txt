@@ -418,7 +418,7 @@ if ( MSVC )
     add_compile_options ( /WX )
   endif ( FATAL_WARNING )
   set ( CMAKE_EXE_LINKER_FLAGS "/manifest:no" )
-  set ( CMAKE_MODULE_LINKER_FLAGS "/manifest:no" ) 
+  set ( CMAKE_MODULE_LINKER_FLAGS "/manifest:no" )
   set ( CMAKE_SHARED_LINKER_FLAGS="/manifest:no" )
 endif ()
 
@@ -493,7 +493,22 @@ if (${CMAKE_SYSTEM_NAME} MATCHES FreeBSD OR ${CMAKE_SYSTEM_NAME} MATCHES NetBSD 
   set ( system_libs -lexecinfo )
 endif ()
 
-target_link_libraries ( openxcom ${system_libs} ${SDLIMAGE_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLGFX_LIBRARY} ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${EXTRA_XCOM_LIBS} debug ${YAMLCPP_LIBRARY_DEBUG} optimized ${YAMLCPP_LIBRARY} )
+message(STATUS "NDS_LIBRARY='${NDS_LIBRARY}'")
+
+#target_link_libraries ( openxcom ${system_libs} ${SDLIMAGE_LIBRARY} ${SDLMIXER_LIBRARY} ${SDLGFX_LIBRARY} ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${EXTRA_XCOM_LIBS} ${YAMLCPP_LIBRARY} ${NDS_LIBRARY} )
+target_link_libraries(openxcom
+    ${SDLIMAGE_LIBRARY}
+    ${SDLGFX_LIBRARY}
+    ${SDL_LIBRARY}
+    ${YAMLCPP_LIBRARY}
+
+    ${NDS_LIBRARY}
+    nosys
+    stdc++
+    m
+    c
+    gcc
+)
 
 # Pack libraries into bundle and link executable appropriately
 if ( APPLE AND CREATE_BUNDLE )

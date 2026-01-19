@@ -1,7 +1,7 @@
-set(CMAKE_CXX_COMPILER "/sbin/arm-none-eabi-g++")
+set(CMAKE_CXX_COMPILER "/opt/devkitpro/devkitARM/bin/arm-none-eabi-g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
-set(CMAKE_CXX_COMPILER_VERSION "14.2.0")
+set(CMAKE_CXX_COMPILER_VERSION "15.2.0")
 set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_CXX_COMPILER_WRAPPER "")
 set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "17")
@@ -25,11 +25,11 @@ set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "")
 
 
 
-set(CMAKE_AR "/sbin/arm-none-eabi-ar")
-set(CMAKE_CXX_COMPILER_AR "/sbin/arm-none-eabi-gcc-ar")
-set(CMAKE_RANLIB "/sbin/arm-none-eabi-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/sbin/arm-none-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/sbin/arm-none-eabi-ld")
+set(CMAKE_AR "/opt/devkitpro/devkitARM//bin/arm-none-eabi-ar")
+set(CMAKE_CXX_COMPILER_AR "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ar")
+set(CMAKE_RANLIB "/opt/devkitpro/devkitARM/bin/arm-none-eabi-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ranlib")
+set(CMAKE_LINKER "/opt/devkitpro/devkitARM/bin/arm-none-eabi-ld")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_CXX_COMPILER_LINKER "NOTFOUND")
@@ -60,7 +60,7 @@ endforeach()
 set(CMAKE_CXX_LINKER_PREFERENCE 30)
 set(CMAKE_CXX_LINKER_PREFERENCE_PROPAGATES 1)
 set(CMAKE_CXX_LINKER_DEPFILE_SUPPORTED )
-set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)
+set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED )
 set(CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED )
 
 # Save compiler ABI information.
@@ -90,7 +90,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/arm-none-eabi/include/c++/14.2.0;/usr/arm-none-eabi/include/c++/14.2.0/arm-none-eabi;/usr/arm-none-eabi/include/c++/14.2.0/backward;/usr/lib/gcc/arm-none-eabi/14.2.0/include;/usr/lib/gcc/arm-none-eabi/14.2.0/include-fixed;/usr/arm-none-eabi/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/opt/devkitpro/libnds/include;/opt/devkitpro/calico/include;/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp/include;/home/jakov/Documents/OpenXcom-DS/libs/SDL-nds/include;/opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0;/opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/arm-none-eabi;/opt/devkitpro/devkitARM/arm-none-eabi/include/c++/15.2.0/backward;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed;/opt/devkitpro/devkitARM/arm-none-eabi/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

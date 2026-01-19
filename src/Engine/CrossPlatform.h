@@ -22,6 +22,10 @@
 #include <vector>
 #include <utility>
 
+#ifdef __NDS__
+#include <time.h>
+#endif
+
 namespace OpenXcom
 {
 

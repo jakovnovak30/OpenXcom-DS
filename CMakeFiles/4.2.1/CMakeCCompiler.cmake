@@ -1,10 +1,10 @@
-set(CMAKE_C_COMPILER "/sbin/arm-none-eabi-gcc")
+set(CMAKE_C_COMPILER "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
-set(CMAKE_C_COMPILER_VERSION "14.2.0")
+set(CMAKE_C_COMPILER_VERSION "15.2.0")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
-set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "17")
+set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "23")
 set(CMAKE_C_EXTENSIONS_COMPUTED_DEFAULT "ON")
 set(CMAKE_C_STANDARD_LATEST "23")
 set(CMAKE_C_COMPILE_FEATURES "c_std_90;c_function_prototypes;c_std_99;c_restrict;c_variadic_macros;c_std_11;c_static_assert;c_std_17;c_std_23")
@@ -23,11 +23,11 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID "")
 
 
 
-set(CMAKE_AR "/sbin/arm-none-eabi-ar")
-set(CMAKE_C_COMPILER_AR "/sbin/arm-none-eabi-gcc-ar")
-set(CMAKE_RANLIB "/sbin/arm-none-eabi-ranlib")
-set(CMAKE_C_COMPILER_RANLIB "/sbin/arm-none-eabi-gcc-ranlib")
-set(CMAKE_LINKER "/sbin/arm-none-eabi-ld")
+set(CMAKE_AR "/opt/devkitpro/devkitARM//bin/arm-none-eabi-ar")
+set(CMAKE_C_COMPILER_AR "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ar")
+set(CMAKE_RANLIB "/opt/devkitpro/devkitARM/bin/arm-none-eabi-ranlib")
+set(CMAKE_C_COMPILER_RANLIB "/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ranlib")
+set(CMAKE_LINKER "/opt/devkitpro/devkitARM/bin/arm-none-eabi-ld")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_C_COMPILER_LINKER "NOTFOUND")
@@ -48,7 +48,7 @@ set(CMAKE_C_SOURCE_FILE_EXTENSIONS c;m)
 set(CMAKE_C_IGNORE_EXTENSIONS h;H;o;O;obj;OBJ;def;DEF;rc;RC)
 set(CMAKE_C_LINKER_PREFERENCE 10)
 set(CMAKE_C_LINKER_DEPFILE_SUPPORTED )
-set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED TRUE)
+set(CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED )
 set(CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED )
 
 # Save compiler ABI information.
@@ -78,7 +78,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/usr/lib/gcc/arm-none-eabi/14.2.0/include;/usr/lib/gcc/arm-none-eabi/14.2.0/include-fixed;/usr/arm-none-eabi/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/opt/devkitpro/libnds/include;/opt/devkitpro/calico/include;/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp/include;/home/jakov/Documents/OpenXcom-DS/libs/SDL-nds/include;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include;/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/include-fixed;/opt/devkitpro/devkitARM/arm-none-eabi/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

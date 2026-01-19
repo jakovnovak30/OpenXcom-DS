@@ -19,6 +19,7 @@
 
 #include "CatFile.h"
 #include <SDL.h>
+#include <SDL_endian.h>
 
 namespace OpenXcom
 {

@@ -23,6 +23,7 @@
 #include "Unicode.h"
 #include "Adlib/adlplayer.h"
 #include "AdlibMusic.h"
+#include "SDL_mixer.h"
 
 namespace OpenXcom
 {

@@ -1,0 +1,264 @@
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../bin/openxcom section `.text' will not fit in region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../bin/openxcom section `.text' will not fit in region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x2767b4c of ../bin/openxcom section `.data' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x2767b4c of ../bin/openxcom section `.data' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x6775b74 of ../bin/openxcom section `.bss' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x6775b74 of ../bin/openxcom section `.bss' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x2767b4c of ../bin/openxcom section `.data' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x6775b74 of ../bin/openxcom/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x2767b4c of ../bin/openxcom section `.data' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: address 0x6775b74 of ../bin/openxcom section `.bss' is not within region `ewram'
+ section `.bss' is not within region `ewram'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: region `ewram' overflowed by 71261044 bytes
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: region `ewram' overflowed by 71261044 bytes
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/ds_arm9_crt0.o: in function `IPCSync':
+(.crt0+0x274): undefined reference to `__libnds_mpu_setup'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2c0): undefined reference to `__dsimode'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2e4): undefined reference to `__secure_area__'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2e8): undefined reference to `initSystem'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2f4): undefined reference to `__libnds_exit'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/ds_arm9_crt0.o: in function `IPCSync':
+(.crt0+0x274): undefined reference to `__libnds_mpu_setup'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2c0): undefined reference to `__dsimode'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2e4): undefined reference to `__secure_area__'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2e8): undefined reference to `initSystem'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (.crt0+0x2f4): undefined reference to `__libnds_exit'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Battlescape/AIModule.cpp.obj: in function `_ZNK8OpenXcom8AIModule4saveEv':
+AIModule.cpp:(.text+0x8580): undefined reference to `__atomic_fetch_add_4'
+CMakeFiles/openxcom.dir/Battlescape/AIModule.cpp.obj: in function `_ZNK8OpenXcom8AIModule4saveEv':
+AIModule.cpp:(.text+0x8580): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Battlescape/BattlescapeState.cpp.obj: in function `_ZN8OpenXcom16BattlescapeState9saveAIMapEv':
+BattlescapeState.cpp:(.text+0x4a20): undefined reference to `stringRGBA'
+CMakeFiles/openxcom.dir/Battlescape/BattlescapeState.cpp.obj: in function `_ZN8OpenXcom16BattlescapeState9saveAIMapEv':
+BattlescapeState.cpp:(.text+0x4a20): undefined reference to `stringRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x4f94): undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x4f94): undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x507c: BattlescapeState.cpp:(.text+0x507c): undefined reference to `lineRGBA'
+): undefined reference to `lineRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x5160): undefined reference to `characterRGBA'
++0x5160): undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x519c): undefined reference to `lineRGBA.text+0x519c): undefined reference to `lineRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x51d8)(.text+0x51d8): undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: BattlescapeState.cpp:(.text+0x: BattlescapeState.cpp:(.text+0x521c): undefined reference to `characterRGBA'
+521c): undefined reference to `characterRGBA'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform16findConfigFolderB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x7fcCMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform16findConfigFolderB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x7fc): undefined reference to `getuid'
+): undefined reference to `getuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0xCrossPlatform.cpp:(.text+0x800): undefined reference to `getpwuid'
+800): undefined reference to `getpwuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform12createFolderERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+CrossPlatform.cpp:(CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform12createFolderERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+CrossPlatform.cpp:(.text+0x1030): undefined reference to `.text+0x1030): undefined reference to `umask'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ldumask'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0x104c): undefined reference to `umask'
+: CrossPlatform.cpp:(.text+0x104c): undefined reference to `umask'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: : CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform13setWindowIconEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform13setWindowIconEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+CrossPlatform.cpp:(.text+0x1b84CrossPlatform.cpp:(.text+0x1b84): undefined reference to `IMG_Load'
+): undefined reference to `IMG_Load'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform15findUserFoldersB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x33b8): undefined reference to `getuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0x33bc): undefined reference to `getpwuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform15findUserFoldersB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x33b8): undefined reference to `getuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0x33bc): undefined reference to `getpwuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform15findDataFoldersB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x393c): undefined reference to `getuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/CrossPlatform.cpp.obj: in function `_ZN8OpenXcom13CrossPlatform15findDataFoldersB5cxx11Ev':
+CrossPlatform.cpp:(.text+0x393c): undefined reference to `getuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0x/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CrossPlatform.cpp:(.text+0x3940): undefined reference to `getpwuid'
+3940): undefined reference to `getpwuid'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayerD2Ev':
+FlcPlayer.cpp:(.text+0x1dc): undefined reference to `Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:(.text+0x1e0/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayerD2Ev':
+FlcPlayer.cpp:(.text+0x1dc): undefined reference to `Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:(.text+0x1e0): undefined reference to `Mix_CloseAudio'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayer6deInitEv':
+FlcPlayer.cpp:(.text+0x2ec): undefined reference to `): undefined reference to `Mix_CloseAudio'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayer6deInitEv':
+FlcPlayer.cpp:(.text+0x2ec): undefined reference to `Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:(.text+0x2f0): undefined reference to `Mix_CloseAudio'
+FlcPlayer.cpp:(.text+0x2f0): undefined reference to `Mix_CloseAudio'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayer9initAudioEth':
+FlcPlayer.cpp:(.text+0x11d4): undefined reference to `Mix_OpenAudio/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayer9initAudioEth':
+FlcPlayer.cpp:(.text+0x11d4): undefined reference to `Mix_OpenAudio'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:('
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:(.text+0x12a4): undefined reference to `.text+0x12a4): undefined reference to `Mix_HookMusic'
+Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/FlcPlayer.cpp.obj: in function `_ZN8OpenXcom9FlcPlayer11deInitAudioEv':
+FlcPlayer.cpp:(.text+0x18d4)_ZN8OpenXcom9FlcPlayer11deInitAudioEv':
+FlcPlayer.cpp:(.text+0x18d4): undefined reference to `Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: undefined reference to `Mix_HookMusic'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: FlcPlayer.cpp:(.text: FlcPlayer.cpp:(.text+0x18d8): undefined reference to `Mix_CloseAudio+0x18d8): undefined reference to `Mix_CloseAudio'
+'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Options.cpp.obj: in function `_ZN8OpenXcom7Options4saveEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Options.cpp:(.text+0x18f90): undefined reference to `__atomic_fetch_add_4'
+CMakeFiles/openxcom.dir/Engine/Options.cpp.obj: in function `_ZN8OpenXcom7Options4saveEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Options.cpp:(.text+0x18f90): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5SoundD2Ev':
+Sound.cpp:(.text+0xCMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5SoundD2Ev':
+Sound.cpp:(.text+0x18): undefined reference to `Mix_FreeChunk'
+18): undefined reference to `Mix_FreeChunk'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4loadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Sound.cpp:(: in function `_ZN8OpenXcom5Sound4loadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Sound.cpp:(.text+0x4c): undefined reference to `.text+0x4c): undefined reference to `Mix_LoadWAV_RW'
+Mix_LoadWAV_RW'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4loadEPKvjCMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4loadEPKvj':
+Sound.cpp:(.text+0x':
+Sound.cpp:(.text+0x1fc): undefined reference to `Mix_LoadWAV_RW'
+1fc): undefined reference to `Mix_LoadWAV_RW'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZNK8OpenXcom5Sound4playEiii':
+Sound.cpp:(.text+0x34c): undefined reference to `Mix_PlayChannelTimed'
+: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZNK8OpenXcom5Sound4playEiii':
+Sound.cpp:(.text+0x34c): undefined reference to `Mix_PlayChannelTimed'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Sound.cpp:(.text/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Sound.cpp:(.text+0x374): undefined reference to `Mix_SetPosition'
++0x374): undefined reference to `Mix_SetPosition'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4stopEv':
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4stopEv':
+Sound.cpp:(.text+0x75c): undefined reference to `Sound.cpp:(.text+0x75c): undefined reference to `Mix_HaltChannel'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Mix_HaltChannel'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound4loopEv':
+Sound.cpp:(.text_ZN8OpenXcom5Sound4loopEv':
+Sound.cpp:(.text+0x790): undefined reference to `Mix_Playing'
++0x790): undefined reference to `Mix_Playing'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Sound.cpp:/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Sound.cpp:(.text+0x7b8): undefined reference to `(.text+0x7b8): undefined reference to `Mix_PlayChannelTimed'
+Mix_PlayChannelTimed'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound8stopLoopEvCMakeFiles/openxcom.dir/Engine/Sound.cpp.obj: in function `_ZN8OpenXcom5Sound8stopLoopEv':
+Sound.cpp:(.text+0x':
+Sound.cpp:(.text+0xa08): undefined reference to `Mix_HaltChannel'
+a08): undefined reference to `Mix_HaltChannel'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7SurfaceC2Eiiiii':
+Surface.cpp:(.text+0x2c8): undefined reference to `posix_memalign'
+CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7SurfaceC2Eiiiii':
+Surface.cpp:(.text+0x2c8): undefined reference to `posix_memalign'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7SurfaceC2ERKS0_CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7SurfaceC2ERKS0_':
+Surface.cpp:(.text+0x':
+Surface.cpp:(.text+0x4ac): undefined reference to `posix_memalign'
+4ac): undefined reference to `posix_memalign'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface8drawLineEssssh':
+Surface.cpp:(.text+0xfc8): undefined reference to `lineColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface8drawLineEssssh':
+Surface.cpp:(.text+0xfc8): undefined reference to `lineColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface10drawCircleEsssh/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface10drawCircleEsssh':
+Surface.cpp:(.text+0x1018): undefined reference to `filledCircleColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ':
+Surface.cpp:(.text+0x1018): undefined reference to `filledCircleColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface11drawPolygonEPsS1_ih':
+Surface.cpp:CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface11drawPolygonEPsS1_ih':
+Surface.cpp:(.text+0x1068)(.text+0x1068): undefined reference to `filledPolygonColor'
+: undefined reference to `filledPolygonColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface10drawStringEssPKch':
+CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface10drawStringEssPKch':
+Surface.cpp:(.text+0x10bcSurface.cpp:(.text+0x10bc): undefined reference to `stringColor'
+): undefined reference to `stringColor'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface6resizeEiiCMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface6resizeEii':
+Surface.cpp:(.text+0x':
+Surface.cpp:(.text+0x1670): undefined reference to `posix_memalign'
+1670): undefined reference to `posix_memalign'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface9loadImageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Surface.cpp:(.text+0x26cc): undefined reference to `IMG_Load'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Surface.cpp.obj: in function `_ZN8OpenXcom7Surface9loadImageERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE':
+Surface.cpp:(.text+0x26cc): undefined reference to `IMG_Load'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Surface.cpp:(.text+0x2820): undefined reference to `posix_memalign'
+Surface.cpp:(.text+0x2820): undefined reference to `posix_memalign'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Engine/Unicode.cpp.obj: in function `_ZN8OpenXcom7Unicode13getUtf8LocaleEv':
+CMakeFiles/openxcom.dir/Engine/Unicode.cpp.obj: in function `_ZN8OpenXcom7Unicode13getUtf8LocaleEv':
+Unicode.cpp:(.text+0xUnicode.cpp:(.text+0x28): undefined reference to `popen'
+28): undefined reference to `popen'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: Unicode.cpp:(.text+0x88)Unicode.cpp:(.text+0x88): undefined reference to `pclose'
+: undefined reference to `pclose'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Interface/TextButton.cpp.obj/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Interface/TextButton.cpp.obj: in function `_ZN8OpenXcom10TextButton10mousePressEPNS_6ActionEPNS_5StateE':
+TextButton.cpp:(.text+0x6e0): undefined reference to `Mix_GroupAvailable'
+: in function `_ZN8OpenXcom10TextButton10mousePressEPNS_6ActionEPNS_5StateE':
+TextButton.cpp:(.text+0x6e0): undefined reference to `Mix_GroupAvailable'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Interface/Window.cpp.obj/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Interface/Window.cpp.obj: in function `_ZN8OpenXcom6Window5popupEv':
+Window.cpp:(.text+0x1b8): undefined reference to `Mix_GroupAvailable'
+: in function `_ZN8OpenXcom6Window5popupEv':
+Window.cpp:(.text+0x1b8): undefined reference to `Mix_GroupAvailable'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Menu/OptionsAudioState.cpp.obj: in function `_ZN8OpenXcom17OptionsAudioState18slrUiVolumeReleaseEPNS_6ActionE':
+CMakeFiles/openxcom.dir/Menu/OptionsAudioState.cpp.obj: in function `_ZN8OpenXcom17OptionsAudioState18slrUiVolumeReleaseEPNS_6ActionE':
+OptionsAudioState.cpp:(.text+0x148OptionsAudioState.cpp:(.text+0x148): undefined reference to `Mix_GroupAvailable'
+): undefined reference to `Mix_GroupAvailable'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Menu/OptionsAudioState.cpp.obj: in function `_ZN8OpenXcom17OptionsAudioStateC2ENS_13OptionsOriginE':
+OptionsAudioState.cpp:(.text+0x1aa4): undefined reference to `Mix_GetMusicType'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Menu/OptionsAudioState.cpp.obj: in function `_ZN8OpenXcom17OptionsAudioStateC2ENS_13OptionsOriginE':
+OptionsAudioState.cpp:(.text+0x1aa4): undefined reference to `Mix_GetMusicType'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Menu/StartState.cpp.obj: in function `_ZN8OpenXcom10StartState4initEv':
+StartState.cpp:(.text+0x2170): undefined reference to `Mix_CloseAudio'
+CMakeFiles/openxcom.dir/Menu/StartState.cpp.obj: in function `_ZN8OpenXcom10StartState4initEv':
+StartState.cpp:(.text+0x2170): undefined reference to `Mix_CloseAudio'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Menu/VideoState.cpp.obj: in function `_ZN8OpenXcom13AudioSequenceclEv':
+CMakeFiles/openxcom.dir/Menu/VideoState.cpp.obj: in function `_ZN8OpenXcom13AudioSequenceclEv':
+VideoState.cpp:(.text._ZN8OpenXcom13AudioSequenceclEv[_ZN8OpenXcom13AudioSequenceclEv]+0xVideoState.cpp:(.text._ZN8OpenXcom13AudioSequenceclEv[_ZN8OpenXcom13AudioSequenceclEv]+0x5ec): undefined reference to `Mix_Volume'
+5ec): undefined reference to `Mix_Volume'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Savegame/AlienStrategy.cpp.obj: in function `_ZNK8OpenXcom13AlienStrategy4saveEv':
+AlienStrategy.cpp:(.text+0x8120): undefined reference to `__atomic_fetch_add_4'
+CMakeFiles/openxcom.dir/Savegame/AlienStrategy.cpp.obj: in function `_ZNK8OpenXcom13AlienStrategy4saveEv':
+AlienStrategy.cpp:(.text+0x8120): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Savegame/AlienStrategy.cpp.obj: in function `_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_':
+CMakeFiles/openxcom.dir/Savegame/AlienStrategy.cpp.obj: in function `_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_':
+AlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]+0xAlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]+0x538): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: 538): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: AlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]AlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]+0xbf4): undefined reference to `__atomic_fetch_add_4'
++0xbf4): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: AlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]AlienStrategy.cpp:(.text._ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_[_ZN4YAML7convertISt6vectorISt4pairINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiESaIS9_EEE6encodeERKSB_]+0xe00): undefined reference to `__atomic_fetch_add_4+0xe00): undefined reference to `__atomic_fetch_add_4'
+'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Savegame/Base.cpp.obj: in function `_ZNK8OpenXcom4Base4saveEv':
+Base.cpp:(.text+0xb2e8): undefined reference to `__atomic_fetch_add_4'
+CMakeFiles/openxcom.dir/Savegame/Base.cpp.obj: in function `_ZNK8OpenXcom4Base4saveEv':
+Base.cpp:(.text+0xb2e8): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Savegame/Base.cpp.obj/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: CMakeFiles/openxcom.dir/Savegame/Base.cpp.obj:Base.cpp:(.text+0xb4c8:Base.cpp:(.text+0xb4c8): more undefined references to `__atomic_fetch_add_4' follow
+): more undefined references to `__atomic_fetch_add_4' follow
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/SDL-nds/libs/libSDL.a(SDL_ndsvideo.o): in function `NDS_SetVideoMode':
+SDL_ndsvideo.c:(.text+0x462): undefined reference to `vramSetMainBanks'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/SDL-nds/libs/libSDL.a(SDL_ndsvideo.o): in function `NDS_VideoInit':
+SDL_ndsvideo.c:(.text../libs/SDL-nds/libs/libSDL.a(SDL_ndsvideo.o): in function `NDS_SetVideoMode':
+SDL_ndsvideo.c:(.text+0x462): undefined reference to `vramSetMainBanks'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/SDL-nds/libs/libSDL.a(SDL_ndsvideo.o): in function `NDS_VideoInit':
+SDL_ndsvideo.c:(.text+0x5e0): undefined reference to `irqInit'
++0x5e0): undefined reference to `irqInit'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x5e8): undefined reference to `irqSet'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x5ee): undefined reference to `irqEnable'
+.text+0x5e8): undefined reference to `irqSet'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x5ee): undefined reference to `irqEnable'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x608): undefined reference to `vramSetMainBanks'
+608): undefined reference to `vramSetMainBanks'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x60e): undefined reference to `vramSetBankH'
++0x60e): undefined reference to `vramSetBankH'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x614): undefined reference to `.text+0x614): undefined reference to `vramSetBankI'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: vramSetBankI'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsvideo.c:(.text+0x62eSDL_ndsvideo.c:(.text+0x62e): undefined reference to `consoleInitDefault'
+): undefined reference to `consoleInitDefault'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/SDL-nds/libs/libSDL.a(SDL_ndsaudio.o): in function `NDS_OpenAudio':
+SDL_ndsaudio.c:(.text/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/SDL-nds/libs/libSDL.a(SDL_ndsaudio.o): in function `NDS_OpenAudio':
+SDL_ndsaudio.c:(.text+0xde): undefined reference to `irqInit'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text+0xe6): undefined reference to `irqSet'
++0xde): undefined reference to `irqInit'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text+0xe6): undefined reference to `irqSet'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text+0x/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text+0xf0): undefined reference to `irqSet'
+f0): undefined reference to `irqSet'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: SDL_ndsaudio.c:(.text+0xf8): undefined reference to `irqEnable'
++0xf8): undefined reference to `irqEnable'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: ../libs/yaml-cpp/libyaml-cpp.a(nodebuilder.cpp.obj): in function `_ZN4YAML11NodeBuilder3PopEv':
+nodebuilder.cpp:(.text+0x../libs/yaml-cpp/libyaml-cpp.a(nodebuilder.cpp.obj): in function `_ZN4YAML11NodeBuilder3PopEv':
+nodebuilder.cpp:(.text+0x9d4): undefined reference to `__atomic_fetch_add_4'
+9d4): undefined reference to `__atomic_fetch_add_4'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/libnds/lib/libnds9.a(keys.o): in function `keypadRead':
+/opt/devkitpro/calico/include/calico/nds/../gba/keypad.h:114:(.text.scanKeys+0xa): undefined reference to `keypadGetState'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/libnds/lib/libnds9.a(keys.o): in function `keysCurrent/opt/devkitpro/libnds/lib/libnds9.a(keys.o): in function `keypadRead':
+/opt/devkitpro/calico/include/calico/nds/../gba/keypad.h:114:(.text.scanKeys+0xa): undefined reference to `keypadGetState'
+/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /opt/devkitpro/libnds/lib/libnds9.a(keys.o): in function `keysCurrent':
+/home/davem/projects/devkitpro/pacman-packages/libnds/src/libnds-2.0.1/arm9/../source/arm9/keys.c:105:(.text.scanKeys+0x12): undefined reference to `touchRead'
+':
+/home/davem/projects/devkitpro/pacman-packages/libnds/src/libnds-2.0.1/arm9/../source/arm9/keys.c:105:(.text.scanKeys+0x12): undefined reference to `touchRead'
+collect2: error: ld returned 1 exit status
+collect2: error: ld returned 1 exit status
+make[2]: *** [src/CMakeFiles/openxcom.dir/build.make:5129: bin/openxcom] Error 1
+make[2]: *** [src/CMakeFiles/openxcom.dir/build.make:5129: bin/openxcom] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1085: src/CMakeFiles/openxcom.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:1085: src/CMakeFiles/openxcom.dir/all] Error 2
+make: *** [Makefile:156: all] Error 2
+make: *** [Makefile:156: all] Error 2

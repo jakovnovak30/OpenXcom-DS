@@ -1,16 +1,39 @@
 cmake_minimum_required ( VERSION 3.5 )
 
 # specify cross compilers and tools
-set(CMAKE_C_COMPILER /sbin/arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER /sbin/arm-none-eabi-g++)
-set(CMAKE_ASM_COMPILER /sbin/arm-none-eabi-gcc)
-set(CMAKE_AR /sbin/arm-none-eabi-ar)
-set(CMAKE_OBJCOPY /sbin/arm-none-eabi-objcopy)
-set(CMAKE_OBJDUMP /sbin/arm-none-eabi-objdump)
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+set(DEVKITPRO /opt/devkitpro/)
+set(DEVKITARM /opt/devkitpro/devkitARM/)
+
+if(NOT DEVKITARM)
+    message(FATAL_ERROR "DEVKITARM environment variable not set")
+endif()
+
+set(CMAKE_C_COMPILER   ${DEVKITARM}/bin/arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER ${DEVKITARM}/bin/arm-none-eabi-g++)
+set(CMAKE_ASM_COMPILER ${DEVKITARM}/bin/arm-none-eabi-gcc)
+set(CMAKE_AR ${DEVKITARM}/bin/arm-none-eabi-ar)
+set(CMAKE_OBJCOPY ${DEVKITARM}/bin/arm-none-eabi-objcopy)
+set(CMAKE_OBJDUMP ${DEVKITARM}/bin/arm-none-eabi-objdump)
 set(SIZE /sbin/arm-none-eabi-size)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-set(DS_FLAGS "-O3 -mcpu=arm9tdmi")
+set(YAMLCPP_LIBRARY "${CMAKE_SOURCE_DIR}/libs/yaml-cpp/libyaml-cpp.a")
+set(SDLIMAGE_LIBRARY "/opt/devkitpro/libnds/lib/libSDL_image.a")
+set(SDLGFX_LIBRARY "/opt/devkitpro/libnds/lib/libSDL_gfx.a")
+set(SDL_LIBRARY "${CMAKE_SOURCE_DIR}/libs/SDL-nds/libs/libSDL.a")
+set(NDS_LIBRARY "/opt/devkitpro/libnds/lib/libnds9.a")
+
+set(DS_FLAGS
+  "-O1 -mcpu=arm9tdmi -fpermissive \
+  -DARM9 \
+  -D__NDS__ -D__NO_OPENGL -D__NO_MUSIC \
+  -I/opt/devkitpro/libnds/include \
+  -I/opt/devkitpro/calico/include \
+  -I${CMAKE_SOURCE_DIR}/libs/yaml-cpp/include \
+  -I${CMAKE_SOURCE_DIR}/libs/SDL-nds/include")
 set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${DS_FLAGS}")
 set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS} ${DS_FLAGS}")
 
@@ -55,30 +78,10 @@ set ( CPACK_PACKAGE_VERSION_MAJOR ${CMAKE_MATCH_1} )
 set ( CPACK_PACKAGE_VERSION_MINOR ${CMAKE_MATCH_2} )
 set ( CPACK_PACKAGE_VERSION_PATCH "" )
 
-if ( "${OPENXCOM_VERSION_STRING}" STREQUAL "" )
-  find_package ( Git )
-  if ( GIT_FOUND )
-    message("git found: ${GIT_EXECUTABLE}")
-    execute_process ( COMMAND ${GIT_EXECUTABLE} describe --dirty
-      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-      OUTPUT_VARIABLE git_describe_out
-      ERROR_VARIABLE git_describe_error
-      RESULT_VARIABLE git_describe_result
-      )
-    string ( REGEX MATCH "([a-z|0-9|.]*)-([0-9]*)-g([a-z|0-9]*)([-|a-z]*)" git_commit "${git_describe_out}" )
-    set ( git_tag ${CMAKE_MATCH_1} )
-    set ( git_nb_commit ${CMAKE_MATCH_2} )
-    set ( git_commit ${CMAKE_MATCH_3} )
-    set ( git_dirty ${CMAKE_MATCH_4} )
-    set ( OPENXCOM_VERSION_STRING ".${git_commit}${git_dirty}" )
-  endif()
-endif()
-
 add_definitions( -DGIT_BUILD=1 )
 
 configure_file("${CMAKE_SOURCE_DIR}/src/git_version.h.in" "${CMAKE_CURRENT_BINARY_DIR}/git_version.h" )
 include_directories ( "${CMAKE_CURRENT_BINARY_DIR}" )
-
 
 if ( DEV_BUILD )
   # Append the commit to version number
@@ -138,16 +141,12 @@ endif ()
 
 
 add_subdirectory(libs/yaml-cpp)
-
-add_library(SDL STATIC IMPORTED)
-
-set_target_properties(SDL PROPERTIES
-    IMPORTED_LOCATION
-        ${CMAKE_SOURCE_DIR}/libs/SDL-nds/lib/libSDL.a
-
-    INTERFACE_INCLUDE_DIRECTORIES
-        ${CMAKE_SOURCE_DIR}/libs/SDL-nds/include
-)
-
-add_subdirectory ( docs )
 add_subdirectory ( src )
+
+target_compile_options(openxcom PRIVATE
+    -mcpu=arm946e-s
+    -mthumb-interwork
+)
+target_link_options(openxcom PRIVATE
+    -specs=ds_arm9.specs
+)

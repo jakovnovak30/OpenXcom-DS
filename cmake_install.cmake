@@ -27,19 +27,14 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "0")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+  set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/sbin/arm-none-eabi-objdump")
+  set(CMAKE_OBJDUMP "/opt/devkitpro/devkitARM//bin/arm-none-eabi-objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -93,7 +88,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp/cmake_install.cmake")
-  include("/home/jakov/Documents/OpenXcom-DS/docs/cmake_install.cmake")
   include("/home/jakov/Documents/OpenXcom-DS/src/cmake_install.cmake")
 
 endif()

@@ -24,7 +24,7 @@ BUILD_TESTING:BOOL=ON
 CHECK_CCACHE:BOOL=OFF
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=/sbin/arm-none-eabi-addr2line
+CMAKE_ADDR2LINE:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-addr2line
 
 //Choose the type of build.
 CMAKE_BUILD_TYPE:STRING=Release
@@ -34,11 +34,11 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/sbin/arm-none-eabi-gcc-ar
+CMAKE_CXX_COMPILER_AR:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/sbin/arm-none-eabi-gcc-ranlib
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -57,11 +57,11 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/sbin/arm-none-eabi-gcc-ar
+CMAKE_C_COMPILER_AR:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/sbin/arm-none-eabi-gcc-ranlib
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-gcc-ranlib
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -154,7 +154,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/sbin/arm-none-eabi-ld
+CMAKE_LINKER:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-ld
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/sbin/make
@@ -180,7 +180,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/sbin/arm-none-eabi-nm
+CMAKE_NM:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-nm
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -213,10 +213,10 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/sbin/arm-none-eabi-ranlib
+CMAKE_RANLIB:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=/sbin/arm-none-eabi-readelf
+CMAKE_READELF:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -266,7 +266,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/sbin/arm-none-eabi-strip
+CMAKE_STRIP:FILEPATH=/opt/devkitpro/devkitARM/bin/arm-none-eabi-strip
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
@@ -296,14 +296,8 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Where to search for datafiles
 DATADIR:STRING=
 
-//Dependencies directory
-DEPS_DIR:STRING=
-
 //Development Build. Disable this for release builds
 DEV_BUILD:BOOL=ON
-
-//Doxygen program
-DOXYGEN_EXECUTABLE:FILEPATH=/sbin/doxygen
 
 //When building with clang, enable the static analyzer
 ENABLE_CLANG_ANALYSIS:BOOL=OFF
@@ -320,9 +314,6 @@ FORCE_INSTALL_DATA_TO_BIN:BOOL=OFF
 //Path to a program.
 GITCOMMAND:FILEPATH=/sbin/git
 
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/sbin/git
-
 //Command to build the project
 MAKECOMMAND:STRING=/sbin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
@@ -334,48 +325,6 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Visual Studio warning levels
 MSVC_WARNING_LEVEL:STRING=3
-
-//Path to a file.
-OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_GLES2_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_GLES3_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_GLU_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_GLX_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a file.
-OPENGL_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-OPENGL_egl_LIBRARY:FILEPATH=/usr/lib32/libEGL.so
-
-//Path to a library.
-OPENGL_gl_LIBRARY:FILEPATH=/usr/lib32/libGL.so
-
-//Path to a library.
-OPENGL_gles2_LIBRARY:FILEPATH=/usr/lib32/libGLESv2.so
-
-//Path to a library.
-OPENGL_gles3_LIBRARY:FILEPATH=/usr/lib32/libGLESv2.so
-
-//Path to a library.
-OPENGL_glu_LIBRARY:FILEPATH=/usr/lib/libGLU.so
-
-//Path to a library.
-OPENGL_glx_LIBRARY:FILEPATH=/usr/lib32/libGLX.so
-
-//Path to a library.
-OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib32/libOpenGL.so
-
-//Path to a file.
-OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
 //Version string (after x.x)
 OPENXCOM_VERSION_STRING:STRING=
@@ -389,47 +338,8 @@ OpenXcom_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 OpenXcom_SOURCE_DIR:STATIC=/home/jakov/Documents/OpenXcom-DS
 
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/sbin/pkg-config
-
-//Path to a file.
-SDLGFX_INCLUDE_DIR:PATH=/usr/include/SDL
-
-//Path to a library.
-SDLGFX_LIBRARY:FILEPATH=/usr/lib/libSDL_gfx.so
-
-//Path to a file.
-SDLIMAGE_INCLUDE_DIR:PATH=/usr/include/SDL
-
-//Path to a library.
-SDLIMAGE_LIBRARY:FILEPATH=/usr/lib/libSDL_image.so
-
-//Path to a library.
-SDLMAIN_LIBRARY:FILEPATH=/usr/lib/libSDLmain.a
-
-//Path to a file.
-SDLMIXER_INCLUDE_DIR:PATH=/usr/include/SDL
-
-//Path to a library.
-SDLMIXER_LIBRARY:FILEPATH=/usr/lib/libSDL_mixer.so
-
-//Path to a file.
-SDL_INCLUDE_DIR:PATH=/usr/include/SDL
-
-//Where the SDL Library can be found
-SDL_LIBRARY:STRING=/usr/lib/libSDLmain.a;/usr/lib/libSDL.so;-lpthreads
-
 //Name of the computer/site where compile is being run
 SITE:STRING=archtop
-
-//Path to a file.
-YAMLCPP_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-YAMLCPP_LIBRARY:FILEPATH=/usr/lib/libyaml-cpp.so
 
 //Build yaml-cpp shared library
 YAML_BUILD_SHARED_LIBS:BOOL=OFF
@@ -438,10 +348,10 @@ YAML_BUILD_SHARED_LIBS:BOOL=OFF
 YAML_CPP_BINARY_DIR:STATIC=/home/jakov/Documents/OpenXcom-DS/libs/yaml-cpp
 
 //Enable yaml-cpp contrib in library
-YAML_CPP_BUILD_CONTRIB:BOOL=ON
+YAML_CPP_BUILD_CONTRIB:BOOL=OFF
 
 //Enable parse tools
-YAML_CPP_BUILD_TOOLS:BOOL=ON
+YAML_CPP_BUILD_TOOLS:BOOL=OFF
 
 //Disable uninstallation of yaml-cpp
 YAML_CPP_DISABLE_UNINSTALL:BOOL=OFF
@@ -466,9 +376,6 @@ YAML_ENABLE_PIC:BOOL=ON
 
 //Use system googletest if found
 YAML_USE_SYSTEM_GTEST:BOOL=OFF
-
-//Path to a library.
-pkgcfg_lib_PC_YAMLCPP_yaml-cpp:FILEPATH=/usr/lib/libyaml-cpp.so
 
 
 ########################
@@ -553,10 +460,6 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
-//Test CMAKE_HAVE_LIBC_PTHREAD
-CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
-//Have library pthreads
-CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/jakov/Documents/OpenXcom-DS
@@ -590,8 +493,6 @@ CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
 CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
 CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
-//Install .so files without execute permission.
-CMAKE_INSTALL_SO_NO_EXE:INTERNAL=0
 //ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
 CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -613,7 +514,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
@@ -664,99 +565,16 @@ CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
-//Details about finding Git
-FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/sbin/git][v2.52.0()]
-//Details about finding OpenGL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib32/libOpenGL.so][/usr/lib32/libGLX.so][/usr/include][ ][v()]
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/sbin/pkg-config][v2.5.1()]
-//Details about finding Threads
-FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND
 MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR
-OPENGL_EGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_GLES2_INCLUDE_DIR
-OPENGL_GLES2_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_GLES3_INCLUDE_DIR
-OPENGL_GLES3_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_GLU_INCLUDE_DIR
-OPENGL_GLU_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_GLX_INCLUDE_DIR
-OPENGL_GLX_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_INCLUDE_DIR
-OPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_egl_LIBRARY
-OPENGL_egl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_gl_LIBRARY
-OPENGL_gl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_gles2_LIBRARY
-OPENGL_gles2_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_gles3_LIBRARY
-OPENGL_gles3_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_glu_LIBRARY
-OPENGL_glu_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_glx_LIBRARY
-OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_opengl_LIBRARY
-OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
-OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
-PC_YAMLCPP_CFLAGS:INTERNAL=-I/usr/include
-PC_YAMLCPP_CFLAGS_I:INTERNAL=
-PC_YAMLCPP_CFLAGS_OTHER:INTERNAL=
-PC_YAMLCPP_FOUND:INTERNAL=1
-PC_YAMLCPP_INCLUDEDIR:INTERNAL=/usr/include
-PC_YAMLCPP_INCLUDE_DIRS:INTERNAL=/usr/include
-PC_YAMLCPP_LDFLAGS:INTERNAL=-L/usr/lib;-lyaml-cpp
-PC_YAMLCPP_LDFLAGS_OTHER:INTERNAL=
-PC_YAMLCPP_LIBDIR:INTERNAL=/usr/lib
-PC_YAMLCPP_LIBRARIES:INTERNAL=yaml-cpp
-PC_YAMLCPP_LIBRARY_DIRS:INTERNAL=/usr/lib
-PC_YAMLCPP_LIBS:INTERNAL=
-PC_YAMLCPP_LIBS_L:INTERNAL=
-PC_YAMLCPP_LIBS_OTHER:INTERNAL=
-PC_YAMLCPP_LIBS_PATHS:INTERNAL=
-PC_YAMLCPP_MODULE_NAME:INTERNAL=yaml-cpp
-PC_YAMLCPP_PREFIX:INTERNAL=/usr
-PC_YAMLCPP_STATIC_CFLAGS:INTERNAL=-I/usr/include
-PC_YAMLCPP_STATIC_CFLAGS_I:INTERNAL=
-PC_YAMLCPP_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_YAMLCPP_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include
-PC_YAMLCPP_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lyaml-cpp
-PC_YAMLCPP_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_YAMLCPP_STATIC_LIBDIR:INTERNAL=
-PC_YAMLCPP_STATIC_LIBRARIES:INTERNAL=yaml-cpp
-PC_YAMLCPP_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib
-PC_YAMLCPP_STATIC_LIBS:INTERNAL=
-PC_YAMLCPP_STATIC_LIBS_L:INTERNAL=
-PC_YAMLCPP_STATIC_LIBS_OTHER:INTERNAL=
-PC_YAMLCPP_STATIC_LIBS_PATHS:INTERNAL=
-PC_YAMLCPP_VERSION:INTERNAL=0.8.0
-PC_YAMLCPP_yaml-cpp_INCLUDEDIR:INTERNAL=
-PC_YAMLCPP_yaml-cpp_LIBDIR:INTERNAL=
-PC_YAMLCPP_yaml-cpp_PREFIX:INTERNAL=
-PC_YAMLCPP_yaml-cpp_VERSION:INTERNAL=
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-SDL_LIBRARY_TEMP:INTERNAL=/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDLmain.a;/usr/lib/libSDL.so;-lpthreads;-lpthreads;-lpthreads;-lpthreads;-lpthreads;-lpthreads;-lpthreads;-lpthreads
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-__pkg_config_arguments_PC_YAMLCPP:INTERNAL=QUIET;yaml-cpp
-__pkg_config_checked_PC_YAMLCPP:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_YAMLCPP_yaml-cpp
-pkgcfg_lib_PC_YAMLCPP_yaml-cpp-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/usr/lib
 

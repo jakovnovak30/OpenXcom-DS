@@ -64,6 +64,7 @@ Game::Game(const std::string &title) : _screen(0), _cursor(0), _lang(0), _save(0
 	Log(LOG_INFO) << "SDL initialized successfully.";
 
 	// Initialize SDL_mixer
+	#ifndef __NDS__
 	if (SDL_InitSubSystem(SDL_INIT_AUDIO) < 0)
 	{
 		Log(LOG_ERROR) << SDL_GetError();
@@ -74,10 +75,11 @@ Game::Game(const std::string &title) : _screen(0), _cursor(0), _lang(0), _save(0
 	{
 		initAudio();
 	}
+	#endif
 
 	// trap the mouse inside the window
 	SDL_WM_GrabInput(Options::captureMouse);
-	
+
 	// Set the window icon
 	CrossPlatform::setWindowIcon(IDI_ICON1, FileMap::getFilePath("openxcom.png"));
 
@@ -93,7 +95,7 @@ Game::Game(const std::string &title) : _screen(0), _cursor(0), _lang(0), _save(0
 
 	// Create cursor
 	_cursor = new Cursor(9, 13);
-	
+
 	// Create invisible hardware cursor to workaround bug with absolute positioning pointing devices
 	SDL_ShowCursor(SDL_ENABLE);
 	Uint8 cursor = 0;
@@ -130,9 +132,11 @@ Game::~Game()
 	delete _screen;
 	delete _fpsCounter;
 
+	#ifndef __NDS__
 	Mix_CloseAudio();
 
 	SDL_Quit();
+	#endif
 }
 
 /**
@@ -287,7 +291,7 @@ void Game::run()
 				break;
 			}
 		}
-		
+
 		// Process rendering
 		if (runningState != PAUSED)
 		{
@@ -332,7 +336,7 @@ void Game::run()
 		// Save on CPU
 		switch (runningState)
 		{
-			case RUNNING: 
+			case RUNNING:
 				SDL_Delay(1); //Save CPU from going 100%
 				break;
 			case SLOWED: case PAUSED:
@@ -366,6 +370,7 @@ void Game::quit()
  */
 void Game::setVolume(int sound, int music, int ui)
 {
+	#ifndef __NDS__
 	if (!Options::mute)
 	{
 		if (sound >= 0)
@@ -394,6 +399,7 @@ void Game::setVolume(int sound, int music, int ui)
 			Mix_Volume(2, ui);
 		}
 	}
+	#endif
 }
 
 double Game::volumeExponent(int volume)
@@ -644,6 +650,7 @@ void Game::loadLanguages()
  */
 void Game::initAudio()
 {
+	#ifndef __NDS__
 	Uint16 format = MIX_DEFAULT_FORMAT;
 	if (Options::audioBitDepth == 8)
 		format = AUDIO_S8;
@@ -671,6 +678,7 @@ void Game::initAudio()
 		Log(LOG_INFO) << "SDL_mixer initialized successfully.";
 		setVolume(Options::soundVolume, Options::musicVolume, Options::uiVolume);
 	}
+	#endif
 }
 
 }
